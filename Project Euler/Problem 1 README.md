@@ -4,4 +4,6 @@ Find the sum of all the multiples of 3 or 5 below 1000. lets generilze this to a
 
 Solution:
 The sum of all the multiples of 3 can be written as </br>
-![3+6+9+...+99=3(1+2+3+...+33)=3(33*34)/2](https://render.githubusercontent.com/render/math?math=3%2B6%2B9%2B...%2B99%3D3(1%2B2%2B3%2B...%2B33))
+![3+6+9+...+99=3(1+2+3+...+33)](https://render.githubusercontent.com/render/math?math=3%2B6%2B9%2B...%2B99%3D3(1%2B2%2B3%2B...%2B33))
+Where the sum of consecutive integers can be written as </br>
+![1+2+3+\cdot \cdot \cdot + N = \dfrac{N(N+1)}{2}](https://render.githubusercontent.com/render/math?math=1%2B2%2B3%2B%5Ccdot%20%5Ccdot%20%5Ccdot%20%2B%20N%20%3D%20%5Cdfrac%7BN(N%2B1)%7D%7B2%7D)
