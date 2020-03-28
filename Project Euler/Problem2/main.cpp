@@ -1,39 +1,46 @@
 #include <stdio.h>      /* printf */
+#include <math.h>       /* sqrt */
 int Fib(int N);
 int FibEven(int N);
+long BinetFibNum(int N);
+long BinetFibNumSum(int N);
+
 int main(int argc, char *argv[])
 {
 
-    int sum;
-    sum =FibEven(4000000);
-    printf("the sum is %d \n",sum);  
+    int Binetsum,simsum,evensum;
+    Binetsum =BinetFibNumSum(4000000);
+    evensum =FibEven(4000000);
+    simsum =Fib(4000000);
+    printf("the sum for simple is %d \n",simsum);
+    printf("the sum for Binet is %d \n",Binetsum); 
+    printf("the sum for even sum is %d \n",evensum);   
     return 0;
 }
 
 int Fib (int N) // The simple loop adding only the even numbers
 {
     int sum = 0;
-    int n1=0,n2=1,n3=2;
-    while(n3<N)
+    int n1=0,n2=1,n=2;
+    while(n<N)
     {    
-        n3=n1+n2;
-        if(n3>4000000)
+        n=n1+n2;
+        if(n>4000000)
         {
             break;
         }
         n1=n2;    
-        n2=n3;   
-        if(n3%2==0)
+        n2=n;   
+        if(n%2==0)
         {
-            sum=sum+n3;
+            sum=sum+n;
         }
 
     }    
     return sum;
 }
 
-//there is a series for Even Fibonacci Numbers
-// Fn= 4F_{n-1}+F_{n-2)
+
 int FibEven(int N) // there is a series for Even Fibonacci Numbers
 {
     long long int sum,n2=0,n1=2,n=0;
@@ -47,6 +54,29 @@ int FibEven(int N) // there is a series for Even Fibonacci Numbers
         {break;}
         sum=sum+n;
 
+    }
+    return sum;
+}
+
+//Binet's Fibonacci Number Formula
+// Binet's formula is a special case of the U_n Binet form with m=1, corresponding to the nth Fibonacci number, 
+long BinetFibNum(int N)
+{
+    return round((pow((1+sqrt(5)),N) + pow((1-sqrt(5)),-N) ) / (pow(2,N)*sqrt(5)));
+}
+
+long BinetFibNumSum(int N)
+{
+    long sum=0;
+    long BinetFib=0;
+    int i=3;
+    while (BinetFib<N)
+    {
+        BinetFib=BinetFibNum(i);
+        if(BinetFib>4000000)
+        {break;}
+        i=i+3;
+        sum+=BinetFib;
     }
     return sum;
 }
