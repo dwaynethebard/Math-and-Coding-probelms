@@ -7,8 +7,8 @@ To reduce the time we need slove this without muiltiple loops, it turns out we c
 
 We are going to create two new arrays. LeftProd and RightProd. let List be the original array
 Where each index for the new arrays are
-Leftprod[i]=sum(List[0..i-1])
-Rightprod[i]=sum(List[i+1..n])
+Leftprod[i]=Prod(List[0..i-1])
+Rightprod[i]=Prod(List[i+1..n])
 
 Then just loop through the list and each index for the new array will be
 list[i]=Leftprod[i]*Right[Prod[i]
