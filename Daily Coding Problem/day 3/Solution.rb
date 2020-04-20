@@ -41,6 +41,6 @@ input.each.with_index(0) do  |x, index|
         print "The lowest positive integer that does not exist in the array is : #{index-nonpositive+1} \n"
         break
     elsif index+1==input.length()
-        print "The lowest positive integer that does not exist in the array is : #{index+1} \n"
+        print "The lowest positive integer that does not exist in the array is : #{index+1-nonpositive} \n"
     end
 end
