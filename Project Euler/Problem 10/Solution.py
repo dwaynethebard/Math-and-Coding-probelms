@@ -1,9 +1,9 @@
 def sum_list(a):
-     prod = 0
+     sum = 0
      for i in a:
-          prod=prod+i  
-     return prod
-
+          sum=sum+i  
+     return sum
+# We can use the Sieve Of Eratosthenes generate primes smaller than 1 to N in O(n log(log(n) ) time with O(n) space
 def sieve_of_eratosthenes(n):
      # List of integers
      prime = [True for i in range(n)]
