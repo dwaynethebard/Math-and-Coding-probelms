@@ -40,7 +40,7 @@ for i in range(13,1001):
           current_largest=current_product
 print (current_largest)
 print ("My program took", time.time() - start_time, "to run")
-
+# 23514624000
 # My program took 0.0010008811950683594 to run
 
 # Just find every product and compare
@@ -54,4 +54,5 @@ for i in range(13,1001):
           current_largest=current_product
 print (current_largest)
 print ("My program took", time.time() - start_time, "to run")
+# 23514624000
 # My program took 0.0050051212310791016 to run
