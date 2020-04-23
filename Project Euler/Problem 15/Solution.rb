@@ -12,8 +12,8 @@ start = Time.now
 # So we use the gamma function Math.gamma returns (n-1)! so we must call n+1
 # or just simply n.downto(1).inject(:*) would work
 def lattice_path_permutation!(n,m)
-    Math.gamma(n+m+1)/(Math.gamma(m+1)*Math.gamma(n+1))        
+    (Math.gamma(n+m+1)/(Math.gamma(m+1)*Math.gamma(n+1))).ceil 
 end
 stop = Time.now
-print lattice_path_permutation!(5,5),"\n"
+print lattice_path_permutation!(20,20),"\n"
 print "The program took ", stop-start," ms to complete"
