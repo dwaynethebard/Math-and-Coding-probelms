@@ -12,18 +12,15 @@ raw_input = "1110"
 
 def decode!(message)
     sum=0
-    # if there is only one digit left return 1
+    
     if (message.length()<2 && message[0].to_i != 0 )
         return 1
     end
-
-    # check if non-zero then decode the remainder
+    
     if message[-1].to_i != 0
         sum= sum + decode!(message[0..-2])
     end
-    # check to see if there is a vaild 2 digit number
     if  message[-2].to_i != 0 && message[-2..-1].to_i < 27
-        # if after returning length is 0 don't call decode
         if message[0..-3].length() == 0
             return sum + 1
         end
